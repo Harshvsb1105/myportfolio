@@ -21,11 +21,11 @@ class MiddleScreen extends StatelessWidget {
             20.widthBox,
             Expanded(
                 child: VxSwiper(
-              enlargeCenterPage: true,
+              enlargeCenterPage: context.isMobile ? true : false,
               scrollDirection: Axis.horizontal,
               items: [
-                ProjectWidget1(title: "Todo Dock"),
-                ProjectWidget2(title: "Taskulator"),
+                ProjectWidget1(title: "Todo Dock\n(On Google Playstore )"),
+                ProjectWidget2(title: "Taskulator\n(On Google Playstore)"),
                 ProjectWidget3(title: "MoReviewVie"),
                 ProjectWidget4(title: "ChatZie"),
               ],
