@@ -35,24 +35,25 @@ class ProjectShowcase1 extends StatelessWidget {
                     .make(),
                 20.widthBox,
                 Expanded(
-                    child: VxSwiper(
-                      enlargeCenterPage: true,
-                      scrollDirection: Axis.horizontal,
-                      items: [
-                        Image.asset('assets/Todo-Dock/Screenshot_.png'),
-                        Image.asset('assets/Todo-Dock/Screenshot_1.png'),
-                        Image.asset('assets/Todo-Dock/Screenshot_2.png'),
-                        Image.asset('assets/Todo-Dock/Screenshot_3.png'),
-                        Image.asset('assets/Todo-Dock/Screenshot_4.png'),
-                      ],
-                      height: 600,
-                      viewportFraction: context.isMobile ? 0.75 : 0.4,
-                      autoPlay: true,
-                      autoPlayAnimationDuration: 1.seconds,
-                    )),
+                  child: VxSwiper(
+                    enlargeCenterPage: true,
+                    scrollDirection: Axis.horizontal,
+                    items: [
+                      Image.asset('assets/Todo-Dock/Screenshot_.png'),
+                      Image.asset('assets/Todo-Dock/Screenshot_1.png'),
+                      Image.asset('assets/Todo-Dock/Screenshot_2.png'),
+                      Image.asset('assets/Todo-Dock/Screenshot_3.png'),
+                      Image.asset('assets/Todo-Dock/Screenshot_4.png'),
+                    ],
+                    height: 300,
+                    viewportFraction: context.isMobile ? 0.75 : 0.4,
+                    autoPlay: true,
+                    autoPlayAnimationDuration: 1.seconds,
+                  ),
+                ),
               ],
           )
-              .p64().h(context.isMobile ? 500 : 300),
+              .p1().h(context.isMobile ? 500 : 300),
           FlatButton(
             child: Text('Google Playstore Link', style: TextStyle(color: Colors.yellow.shade400, fontWeight: FontWeight.bold, fontSize: 30),),
           ).mdClick(() {
@@ -115,7 +116,7 @@ class ProjectShowcase2 extends StatelessWidget {
                       autoPlay: true,
                       autoPlayAnimationDuration: 1.seconds,
                     ))
-              ]).p64().h(context.isMobile ? 500 : 300),
+              ]).p1().h(context.isMobile ? 500 : 300),
           FlatButton(
             child: Text('Google Playstore Link', style: TextStyle(color: Colors.yellow.shade400, fontWeight: FontWeight.bold, fontSize: 30),),
           ).mdClick(() {

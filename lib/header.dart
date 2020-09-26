@@ -29,9 +29,9 @@ class HeaderScreen extends StatelessWidget {
                 VStack([
                   if (context.isMobile) 50.heightBox else 10.heightBox,
                   CustomAppBar().shimmer(primaryColor: Coolors.accentColor),
-                  80.heightBox,
+                  50.heightBox,
                   nameWidget,
-                  20.heightBox,
+                  if(context.isMobile)20.heightBox else 40.heightBox,
                   VxBox()
                       .color(Coolors.accentColor)
                       .size(60, 10)
@@ -39,7 +39,7 @@ class HeaderScreen extends StatelessWidget {
                       .px4()
                       .shimmer(primaryColor: Coolors.accentColor),
                   30.heightBox,
-                  SocialAccounts(),
+                  // SocialAccounts(),
                 ]).pSymmetric(
                   h: context.percentWidth * 10,
                   v: 32,
