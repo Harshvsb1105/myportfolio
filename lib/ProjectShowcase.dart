@@ -220,3 +220,63 @@ class ProjectShowcase4 extends StatelessWidget {
     );
   }
 }
+
+class ProjectShowcase5 extends StatelessWidget {
+  final String title;
+  final String description;
+  // final List<Image> screenshots;
+
+  const ProjectShowcase5(
+      {@required this.title,
+        @required this.description,
+        // @required this.screenshots
+      });
+  @override
+  Widget build(BuildContext context) {
+    return Material(
+      color: Vx.purple700,
+      child: Flex(
+          direction: context.isMobile ? Axis.vertical : Axis.horizontal,
+          children: [
+            'This is the responsive UI of world famous movie and web series streaming platform Netflix.\n'
+                'I developed it using Bloc Library state management\n'
+                'It has following features.\n'
+                .richText
+                .withTextSpanChildren(
+                ['1. You can watch the header movie which is Sintel here.\n'
+                'The movie will run in background, just same as it does on Netflix.\n'
+                    '2. It shows different genre of movies and web series.\n'.textSpan.yellow400.make()])
+                .xl
+                .white
+                .make(),
+            20.widthBox,
+            Expanded(
+                child: VxSwiper(
+                  enlargeCenterPage: true,
+                  scrollDirection: Axis.horizontal,
+                  items: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 5),
+                      child: Image.asset('assets/Netflix/w1.JPG'),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 5),
+                      child: Image.asset('assets/Netflix/w2.JPG'),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 5),
+                      child: Image.asset('assets/Netflix/w3.JPG'),
+                    ),
+                    Image.asset('assets/Netflix/m1.jpg'),
+                    Image.asset('assets/Netflix/m2.jpg'),
+                    Image.asset('assets/Netflix/m3.jpg'),
+                  ],
+                  height: 300,
+                  viewportFraction: context.isMobile ? 0.75 : 0.4,
+                  autoPlay: true,
+                  autoPlayAnimationDuration: 1.seconds,
+                ))
+          ]).p64().h(context.isMobile ? 500 : 300),
+    );
+  }
+}
